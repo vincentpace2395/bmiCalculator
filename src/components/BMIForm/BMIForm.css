@@ -1,0 +1,11 @@
+.form-wrapper {
+    border: 1px solid black;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 10px;
+}
+
+.form-group {
+    margin-top: 5px;
+}
