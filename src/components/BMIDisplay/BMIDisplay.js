@@ -3,12 +3,14 @@ import '../BMIDisplay/BMIDisplay.css';
 
 class BMIDisplay extends React.Component {
     render() {
+        const { bmiValue } = this.props;
+
         return (
             <div>
-                BMI: {this.props.bmiValue}
+                BMI: {bmiValue}
             </div>
         );
     }
-};
+}
 
 export default BMIDisplay;

@@ -9,3 +9,8 @@
 .form-group {
     margin-top: 5px;
 }
+
+button {
+    margin: 10px 30%;
+    justify-content: center;
+}
