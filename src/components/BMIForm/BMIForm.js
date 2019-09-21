@@ -60,7 +60,7 @@ class BMIForm extends React.Component {
                         <Form.Label>Enter height (in) </Form.Label>
                         <Form.Control placeholder="Height (in)" type="number" onChange={this.onHeightChange} />
                     </Form.Group>
-                    <button type="button" onClick={this.onCalculateBmiClick}>Calculate BMI</button>
+                    <button type="button" disabled={!this.state.height || !this.state.weight} onClick={this.onCalculateBmiClick}>Calculate BMI</button>
                     <BMIDisplay bmiValue={this.state.bmi} />
                 </Form>
             </div>
