@@ -30,6 +30,9 @@ class BMIForm extends React.Component {
         this.setState({
             weight: event.target.value
         }, () => {
+            if (Number.isNaN(this.state.weight)) {
+                console.log('Error, weight NaN')
+            }
             console.log(`Weight is ${this.state.weight}`)
         })
     };
@@ -38,6 +41,9 @@ class BMIForm extends React.Component {
         this.setState({
             height: event.target.value
         }, () => {
+            if (Number.isNaN(this.state.height)) {
+                console.log('Error, height NaN')
+            }
             console.log(`Height is ${this.state.height}`)
         })
     };
@@ -48,11 +54,11 @@ class BMIForm extends React.Component {
                 <Form>
                     <Form.Group className='form-group'>
                         <Form.Label>Enter weight (lbs) </Form.Label>
-                        <Form.Control placeholder="Weight (lbs)" onChange={this.onWeightChange} />
+                        <Form.Control placeholder="Weight (lbs)" type="number" onChange={this.onWeightChange} />
                     </Form.Group>
                     <Form.Group className='form-group'>
                         <Form.Label>Enter height (in) </Form.Label>
-                        <Form.Control placeholder="Height (in)" onChange={this.onHeightChange} />
+                        <Form.Control placeholder="Height (in)" type="number" onChange={this.onHeightChange} />
                     </Form.Group>
                     <button type="button" onClick={this.onCalculateBmiClick}>Calculate BMI</button>
                     <BMIDisplay bmiValue={this.state.bmi} />
